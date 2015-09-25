@@ -2,14 +2,10 @@
 
 
 #  Curso UERJ - "Python para computação científica, com Ênfase em geociências"
-#  Ministrantes: Andre Lobato e Rafael Soutelino
-#  vanessa testandoo
+#  Ministrantes: Rafael Soutelino
 #  Curso pyhton - "Analise de Dados Oceanografia - PPG UERJ"
 #  Ministrantes: Rafael Soutelino
-<<<<<<< HEAD
 
-#  Nível: Básico ao Avançado
-=======
 #  Nível: Básico 
 
 #  Data: 25/09/2015
@@ -20,8 +16,6 @@
 # 23422
 # Tópico 1 - Conhendo tipos de objetos Python
 #
-##teste helen ocn
-# teste Camila
 #################################################
 
 # Atribuindo Variáveis
