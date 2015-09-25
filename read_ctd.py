@@ -28,8 +28,16 @@ def parse_header(lines):
     return lon[2:-2].strip(), lat[2:-2].strip()
 
 
-def get_data():
-    pass
+def get_data(lines):
+    depth = []
+    temp  = []
+
+    for line in lines:
+        if line[0] not in ['*', '#']:
+            depth.append(float(line.split()[0]) * -1)
+            temp.append(float(line.split()[1]))
+
+    return depth, temp
 
 
 #### BEGIN SCRIPT ###############################
@@ -38,3 +46,6 @@ f = open(FILENAME)
 lines = f.readlines()
 
 lon, lat = parse_header(lines)
+depth, temp = get_data(lines)
+
+
