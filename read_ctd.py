@@ -2,10 +2,13 @@ import os
 import matplotlib.pyplot as plt
 
 #### CONFIG PARAMETERS ##########################
+
 # pep-8 conventions suggest upper case for global variables
 ROOTDIR = '/source/uerj_ocn_2015'
 DATADIR = os.path.join(ROOTDIR, 'data')
 FILENAME = os.path.join(DATADIR, 'ctd_bruto.cnv')
+FIGDIR = os.path.join(ROOTDIR, 'figures')
+SAVEFIG = True
 
 ##### FUNCTIONS #################################
 
@@ -41,7 +44,7 @@ def get_data(lines):
     return depth, temp
 
 
-def plot_data(temp, depth, lon, lat):
+def plot_data(temp, depth, lon, lat, savefig=True):
     plt.figure()
     plt.plot(temp, depth)
     title = "Temperature profile at location: %s, %s" %(lon, lat)
@@ -50,6 +53,10 @@ def plot_data(temp, depth, lon, lat):
     plt.ylabel('Depth [m]')
     plt.show()
 
+    if savefig:
+        print 'saving figure ...'
+        plt.savefig(os.path.join(FIGDIR, 'temp_profile.png'))
+
 #### BEGIN SCRIPT ###############################
 
 f = open(FILENAME)
@@ -57,7 +64,7 @@ lines = f.readlines()
 
 lon, lat = parse_header(lines)
 depth, temp = get_data(lines)
-plot_data(temp, depth, lon, lat)
+plot_data(temp, depth, lon, lat, savefig=SAVEFIG)
 
 
 
