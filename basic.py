@@ -90,7 +90,7 @@ regua = '=' * 80
 #--------------------------------------------------
 
 palavra = 'Sem falta'
-valor = 500
+valor = 500000
 
 'Precisamos de R$%i!!!' % valor
                                             
