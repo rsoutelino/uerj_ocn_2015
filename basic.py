@@ -11,12 +11,12 @@
 #  Nível: Básico ao Avançado
 =======
 #  Nível: Básico 
->>>>>>> eeea2ca0f0e3533f1d1f8b8fb616f703e56796b9
-#  Data: 27/11/2014
-#  Local: UERJ, Rio de Janeiro 
+
+#  Data: 25/09/2015
+#  Local: UERJ, Rio de Janeiro/ outro lado do mundo 
 #################################################
 #
-# Aula 1
+# Aula 1 - 5h da manhã
 # 23422
 # Tópico 1 - Conhendo tipos de objetos Python
 #
