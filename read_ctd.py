@@ -1,4 +1,5 @@
 import os
+import matplotlib.pyplot as plt
 
 #### CONFIG PARAMETERS ##########################
 # pep-8 conventions suggest upper case for global variables
@@ -40,6 +41,15 @@ def get_data(lines):
     return depth, temp
 
 
+def plot_data(temp, depth, lon, lat):
+    plt.figure()
+    plt.plot(temp, depth)
+    title = "Temperature profile at location: %s, %s" %(lon, lat)
+    plt.title(title)
+    plt.xlabel('Temperature [C]')
+    plt.ylabel('Depth [m]')
+    plt.show()
+
 #### BEGIN SCRIPT ###############################
 
 f = open(FILENAME)
@@ -47,5 +57,8 @@ lines = f.readlines()
 
 lon, lat = parse_header(lines)
 depth, temp = get_data(lines)
+plot_data(temp, depth, lon, lat)
+
+
 
 
